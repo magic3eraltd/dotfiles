@@ -1,0 +1,149 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Adwaita";
+    terminal: "wezterm";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+}
+
+* {
+    bg-main:   #0F1115;
+    bg-alt:    #1A1D23;
+    bg-hover:  #2A2F38;
+    border:    #3A404C;
+    fg:        #C5C8CE;
+    fg-bright: #E6E9EF;
+
+    background-color: @bg-main;
+    text-color: @fg;
+}
+
+window {
+    width: 34%;
+    border: 2px;
+    border-color: @border;
+    border-radius: 10px;
+    background-color: @bg-main;
+    padding: 14px;
+}
+
+mainbox {
+    background-color: @bg-main;
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    text-color: @fg-bright;
+    border-radius: 8px;
+    padding: 10px;
+    spacing: 8px;
+}
+
+prompt {
+    background-color: inherit;
+    text-color: @fg-bright;
+}
+
+entry {
+    background-color: inherit;
+    text-color: @fg-bright;
+    placeholder: "Search...";
+    placeholder-color: @border;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    background-color: @bg-main;
+    spacing: 6px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    background-color: @bg-main;
+    text-color: @fg;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+element normal.normal {
+    background-color: @bg-main;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: @bg-main;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @bg-hover;
+    text-color: @fg-bright;
+}
+
+element selected.active {
+    background-color: @bg-hover;
+    text-color: @fg-bright;
+}
+
+element selected.urgent {
+    background-color: @bg-hover;
+    text-color: @fg-bright;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    size: 1em;
+}
+
+element normal.active {
+    background-color: @bg-main;
+    text-color: @fg;
+}
+element normal.urgent {
+    background-color: @bg-main;
+    text-color: @fg;
+}
+element alternate.active {
+    background-color: @bg-main;
+    text-color: @fg;
+}
+element alternate.urgent {
+    background-color: @bg-main;
+    text-color: @fg;
+}
+scrollbar {
+    background-color: @bg-alt;
+    handle-color: @border;
+    handle-width: 4px;
+    border-radius: 4px;
+    padding: 0;
+}
+mode-switcher {
+    background-color: @bg-main;
+    border-color: @border;
+}
+button {
+    background-color: @bg-main;
+    text-color: @border;
+    border-radius: 6px;
+    padding: 6px;
+}
+button selected {
+    background-color: @bg-hover;
+    text-color: @fg-bright;
+}

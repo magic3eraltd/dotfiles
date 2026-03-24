@@ -1,9 +1,14 @@
 .ssh/
 .gnupg/
-.mozilla/
-.config/google-chrome/
+.config/mozilla/
+.config/spotify/
+.config/discord/
+.config/keepassxc/
+.config/obsidian/
+.config/pulse/
 .config/chromium/
 .env
 *secret*
 *token*
 *password*
+.config/nvim/lazy/
