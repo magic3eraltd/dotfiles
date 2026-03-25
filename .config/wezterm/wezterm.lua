@@ -31,4 +31,5 @@ return {
   default_cursor_style = "BlinkingBar",
 
   enable_wayland = false,
+
 }
