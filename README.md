@@ -18,6 +18,7 @@
 | terminal | wezterm |
 | editor | neovim |
 | file manager | thunar |
+| screenshots | maim |
 | font | JetBrainsMono Nerd Font |
 
 ---
@@ -43,14 +44,14 @@ urgent   #FF5F87
 ### 1. clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git
+git clone https://github.com/magic3eraltd/dotfiles.git
 ```
 
 ### 2. install dependencies
 
 ```bash
 # arch linux
-yay -S i3 polybar rofi dunst picom wezterm neovim thunar fastfetch ttf-jetbrains-mono-nerd
+yay -S i3 polybar rofi dunst picom wezterm neovim thunar fastfetch ttf-jetbrains-mono-nerd maim xclip
 ```
 
 ### 3. apply configs
