@@ -33,6 +33,8 @@ window {
 mainbox {
     background-color: @bg-main;
     spacing: 10px;
+    border: 0px;
+    children: [inputbar, listview];
 }
 
 inputbar {
@@ -64,6 +66,7 @@ listview {
     cycle: true;
     dynamic: true;
     layout: vertical;
+    border: 0px;
 }
 
 element {
@@ -114,18 +117,22 @@ element normal.active {
     background-color: @bg-main;
     text-color: @fg;
 }
+
 element normal.urgent {
     background-color: @bg-main;
     text-color: @fg;
 }
+
 element alternate.active {
     background-color: @bg-main;
     text-color: @fg;
 }
+
 element alternate.urgent {
     background-color: @bg-main;
     text-color: @fg;
 }
+
 scrollbar {
     background-color: @bg-alt;
     handle-color: @border;
@@ -133,17 +140,55 @@ scrollbar {
     border-radius: 4px;
     padding: 0;
 }
+
 mode-switcher {
     background-color: @bg-main;
     border-color: @border;
 }
+
 button {
     background-color: @bg-main;
     text-color: @border;
     border-radius: 6px;
     padding: 6px;
 }
+
 button selected {
     background-color: @bg-hover;
     text-color: @fg-bright;
+}
+
+separator {
+    height: 0;
+    border: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+num-filtered-rows {
+    background-color: transparent;
+}
+
+num-rows {
+    background-color: transparent;
+}
+
+case-indicator {
+    background-color: transparent;
+}
+
+textbox-num-sep {
+    background-color: transparent;
+}
+
+textbox-prompt-colon {
+    background-color: transparent;
+    text-color: @fg-bright;
+    padding: 0;
+    margin: 0;
 }
