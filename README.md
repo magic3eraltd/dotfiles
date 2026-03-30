@@ -2,7 +2,7 @@
 
 > a minimal, monochromatic i3 setup built around clarity and speed
 
-![screenshot](assets/screenshot.png)
+![screenshot](assets/monodrive_screenshot.png)
 
 ---
 
