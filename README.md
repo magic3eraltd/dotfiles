@@ -18,7 +18,8 @@
 | terminal | wezterm |
 | editor | neovim |
 | file manager | thunar |
-| screenshots | maim |
+| fetch | fastfetch |
+| visualizer | cava |
 | font | JetBrainsMono Nerd Font |
 
 ---
@@ -26,15 +27,15 @@
 ## colors
 
 ```
-bg       #1A1D23
-bg-main  #0F1115
-bg-hover #2A2F38
-border   #3A404C
-fg       #C5C8CE
+bg        #1A1D23
+bg-main   #0F1115
+bg-hover  #2A2F38
+border    #3A404C
+fg        #C5C8CE
 fg-bright #E6E9EF
-accent   #E6E9EF
-success  #81C784
-urgent   #FF5F87
+accent    #E6E9EF
+success   #81C784
+urgent    #FF5F87
 ```
 
 ---
@@ -44,14 +45,17 @@ urgent   #FF5F87
 ### 1. clone
 
 ```bash
-git clone https://github.com/magic3eraltd/dotfiles.git
+git clone https://github.com/YOUR_USERNAME/dotfiles.git
 ```
 
 ### 2. install dependencies
 
 ```bash
-# arch linux
-yay -S i3 polybar rofi dunst picom wezterm neovim thunar fastfetch ttf-jetbrains-mono-nerd maim xclip
+# official repos
+sudo pacman -S i3 polybar rofi dunst picom neovim thunar fastfetch cava cmatrix
+
+# AUR
+yay -S wezterm ttf-jetbrains-mono-nerd autotiling
 ```
 
 ### 3. apply configs
@@ -71,6 +75,7 @@ manually symlink or copy the configs you need from the repo to `~/.config/`.
 ├── picom/
 ├── wezterm/
 ├── nvim/
+├── cava/
 ├── Thunar/
 └── fastfetch/
 ```
@@ -81,8 +86,5 @@ manually symlink or copy the configs you need from the repo to `~/.config/`.
 
 - colors are a custom scheme — cold whites on dark grays, no warm tones
 - no automatic theming, intentionally static
+- autotiling for automatic window splitting
 - built on arch linux
-
----
-
-*screenshot coming soon*
