@@ -52,7 +52,7 @@ git clone https://github.com/YOUR_USERNAME/dotfiles.git
 
 ```bash
 # official repos
-sudo pacman -S i3 polybar rofi dunst picom neovim thunar fastfetch cava cmatrix
+sudo pacman -S i3 polybar rofi dunst picom neovim thunar fastfetch udiskie udisks2 cava cmatrix
 
 # AUR
 yay -S wezterm ttf-jetbrains-mono-nerd autotiling

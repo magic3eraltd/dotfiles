@@ -254,6 +254,9 @@ workspace 10 output DP-2
 
 exec --no-startup-id ~/.config/i3/workspace_init.sh
 
+# Udiskie
+exec --no-startup-id udiskie --tray
+
 # Cursor props
 exec_always --no-startup-id xinput --set-prop 10 "libinput Accel Speed" -0.2
 exec_always --no-startup-id xinput --set-prop 10 "libinput Accel Profile Enabled" 0, 1, 0
