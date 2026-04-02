@@ -1,6 +1,7 @@
 # monodrive
 
-> a minimal, monochromatic i3 setup built around clarity and speed
+> A minimal, monochromatic i3 setup built around clarity and speed  
+> Maintained by MAGIC (https://github.com/magic3eraltd)
 
 ![screenshot](assets/monodrive_screenshot.png)
 
@@ -45,22 +46,36 @@ urgent    #FF5F87
 ### 1. clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git
+git clone https://github.com/magic3eraltd/dotfiles.git
+cd dotfiles
 ```
 
 ### 2. install dependencies
 
 ```bash
 # official repos
-sudo pacman -S i3 polybar rofi dunst picom neovim thunar fastfetch udiskie udisks2 cava cmatrix
+sudo pacman -S i3 polybar rofi dunst picom neovim thunar fastfetch udiskie udisks2 ntfs-3g cava cmatrix
 
 # AUR
 yay -S wezterm ttf-jetbrains-mono-nerd autotiling
 ```
 
-### 3. apply configs
+### 3. using the installer script (recommended)
+```bash
+bash install.sh
+```
+this will:
+- backup any existing conflicting configuration files to ~/.config-backup
+- checkout all dotfiles into your $HOME
+- hide untracked files to avoid showing personal files
 
-manually symlink or copy the configs you need from the repo to `~/.config/`.
+### alternative manual bare repository installation
+```bash
+git clone --bare https://github.com/magic3eraltd/dotfiles.git $HOME/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+config checkout
+config config --local status.showUntrackedFiles no
+```
 
 ---
 
@@ -88,3 +103,11 @@ manually symlink or copy the configs you need from the repo to `~/.config/`.
 - no automatic theming, intentionally static
 - autotiling for automatic window splitting
 - built on arch linux
+- existing files that conflicted with dotfiles are moved to ~/.config-backup
+- private/personal files are excluded via .gitignore
+
+## License
+
+This repository is licensed under the MIT License. See the LICENSE file for details.
+
+© 2026 MAGIC. All rights reserved.
