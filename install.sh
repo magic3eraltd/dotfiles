@@ -30,10 +30,10 @@ config checkout 2>&1 | grep -E "\s+\." | awk '{print $1}' | while read -r file; 
 done
 
 # 5. Checkout all files from the repository
-config checkout
+git --git-dir=$(pwd) --work-tree=$HOME checkout
 
 # 6. Hide untracked files to avoid showing personal files
-config config --local status.showUntrackedFiles no
+git --git-dir=$(pwd) --work-tree=$HOME config --local status.showUntrackedFiles no
 
 echo ""
 echo "Monodrive dotfiles installed successfully!"
