@@ -4,7 +4,7 @@
 # Monodrive Dotfiles Installer
 # =============================
 
-REPO_URL="https://github.com/YOUR_USERNAME/dotfiles.git"
+REPO_URL="https://github.com/magic3eraltd/dotfiles.git"
 BARE_DIR="$HOME/.dotfiles"
 BACKUP_DIR="$HOME/.config-backup"
 
