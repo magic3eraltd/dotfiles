@@ -24,17 +24,20 @@ alias config="/usr/bin/git --git-dir=$BARE_DIR --work-tree=$HOME"
 mkdir -p "$BACKUP_DIR"
 
 # 4. Checkout files and move any existing conflicting files to backup
-config checkout 2>&1 | grep -E "\s+\." | awk '{print $1}' | while read -r file; do
+config checkout 2>&1 | grep -E "^\s+." | awk '{print $1}' | while read -r file; do
+    # Пропускаємо пусті рядки
+    [ -z "$file" ] && continue
     mkdir -p "$(dirname "$BACKUP_DIR/$file")"
     mv "$HOME/$file" "$BACKUP_DIR/$file"
 done
 
 # 5. Checkout all files from the repository
-git --git-dir=$(pwd) --work-tree=$HOME checkout
+config checkout
 
 # 6. Hide untracked files to avoid showing personal files
-git --git-dir=$(pwd) --work-tree=$HOME config --local status.showUntrackedFiles no
+config config --local status.showUntrackedFiles no
 
 echo ""
 echo "Monodrive dotfiles installed successfully!"
+echo "Your old configs are backed up in $BACKUP_DIR"
 echo "You can now use your dotfiles as they are."
