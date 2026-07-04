@@ -1,14 +1,41 @@
+# Sensitive data
 .ssh/
 .gnupg/
-.config/mozilla/
-.config/spotify/
-.config/discord/
-.config/keepassxc/
-.config/obsidian/
-.config/pulse/
-.config/chromium/
 .env
 *secret*
 *token*
 *password*
+
+# Browser and applications
+.config/mozilla/
+.config/chromium/
+.config/discord/
+.config/spotify/
+.config/keepassxc/
+.config/obsidian/
+
+# Caches
+.cache/
+.cargo/
+.npm/
+.yarn/
+.rustup/
+
+# Local data
+.local/share/
+.local/state/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Neovim
 .config/nvim/lazy/
+
+# Backups
+*.bk
+*.bak
+*.backup
+*.bk.sh

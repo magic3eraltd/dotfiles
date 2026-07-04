@@ -66,3 +66,7 @@
     foreground = "#FF5F87"
     frame_color = "#FF5F87"
     timeout = 0
+
+[dota2]
+    appname = "dota2"
+    skip_display = true

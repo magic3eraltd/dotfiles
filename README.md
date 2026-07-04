@@ -46,7 +46,7 @@ urgent    #FF5F87
 ### 1. clone
 
 ```bash
-git clone https://github.com/magic3eraltd/dotfiles.git
+git clone --bare https://github.com/magic3eraltd/dotfiles.git
 cd dotfiles
 ```
 
