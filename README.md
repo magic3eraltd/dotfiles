@@ -50,17 +50,7 @@ git clone --bare https://github.com/magic3eraltd/dotfiles.git
 cd dotfiles
 ```
 
-### 2. install dependencies
-
-```bash
-# official repos
-sudo pacman -S i3 polybar rofi dunst picom neovim thunar fastfetch udiskie udisks2 ntfs-3g cava cmatrix
-
-# AUR
-yay -S wezterm ttf-jetbrains-mono-nerd autotiling
-```
-
-### 3. using the installer script (recommended)
+### 2. using the installer script (recommended)
 ```bash
 bash install.sh
 ```
