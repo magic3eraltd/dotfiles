@@ -130,12 +130,6 @@ set $ws13 "13"
 set $ws14 "14"
 set $ws15 "15"
 
-workspace 1 output primary
-workspace 2 output primary
-workspace 3 output primary
-workspace 4 output primary
-workspace 5 output primary
-
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -260,7 +254,12 @@ for_window [class="feh"] floating enable
 for_window [class="Blueman-manager"] floating enable
 
 ### STARTUP
-# Monitors
+# Monitors & workspaces
+include ~/.config/i3/generated_outputs.conf
+
+focus_follows_mouse yes
+mouse_warping none
+workspace_auto_back_and_forth no
 exec_always --no-startup-id ~/.config/i3/scripts/monitors.sh
 
 # Wallpapers

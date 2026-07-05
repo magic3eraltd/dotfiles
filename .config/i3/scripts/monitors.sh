@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 
+PRIMARY_MONITOR="@PRIMARY@"
+SECONDARY_MONITOR="@SECONDARY@"
+THIRD_MONITOR="@THIRD@"
+
 xrandr --auto
 
-PRIMARY=$(xrandr | grep " connected primary" | awk '{print $1}')
-
-if [ -z "$PRIMARY" ]; then
-  PRIMARY=$(xrandr | grep " connected" | head -n1 | awk '{print $1}')
+if [[ -n "$PRIMARY_MONITOR" ]]; then
+    xrandr --output "$PRIMARY_MONITOR" --primary
 fi
 
-xrandr --output "$PRIMARY" --primary
+if [[ -n "$SECONDARY_MONITOR" ]]; then
+    xrandr --output "$SECONDARY_MONITOR" --auto --left-of "$PRIMARY_MONITOR"
+fi
+
+if [[ -n "$THIRD_MONITOR" ]]; then
+    xrandr --output "$THIRD_MONITOR" --auto --right-of "$PRIMARY_MONITOR"
+fi
